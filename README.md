@@ -13,7 +13,10 @@ npx @marp-team/marp-cli@latest slide-deck.md --pptx
 npx @marp-team/marp-cli@latest slide-deck.md -o output.pptx
 
 ## Watch mode
-npx @marp-team/marp-cli@latest -w slide-deck.md
+npx @marp-team/marp-cli@latest --html -w slide-deck.md
+
+## preview
+npx @marp-team/marp-cli@latest --html -p slide-deck.md
 
 ## Server mode (Pass directory to serve)
-npx @marp-team/marp-cli@latest -s ./slides
+npx @marp-team/marp-cli@latest --html -s ./slides
