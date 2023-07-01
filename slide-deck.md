@@ -63,8 +63,10 @@ oratake
 # 前提・おことわり
 
 - あとでスライドは公開します
-  - リンクついてます。具体的な手順は別途URLからご覧ください
+  - 適宜リンクついてます
+  - 具体的な手順、詳細は別途URLからご覧ください
 - 今日は飛ばし飛ばしで雰囲気だけお話します
+- 表記ゆれ、誤った単語が使われ気味です
 - 学習データをもとにした自動生成の是非については言及を差し控えます
   - 私は音楽を作曲、演奏する立場でしたが、生み出す人の力は本当に尊敬しています
   - 今回はあくまで画像生成の現状としてご覧ください
@@ -310,12 +312,24 @@ white background, <lora:NadaNamie:1>
 Not Safe for Work つまり職場では見られないよ！ということ
 - 高画質系: masterpiece, HDR, hyper detailed 部位名
 - 画角: cowboy shot, looking at viewer
+- 服: plaid dress, top hat
 - 装飾: brown black low ponytail with pink fluffy scrunchies
 
-- プロンプトの勉強に→ [ちちぷい](https://www.chichi-pui.com/)
-AI生成画像投稿サイト。たまにプロンプトが併記されてる。
-参考にしつつ、よさそうなLoRAやModelの物色にも使える。
-センシティブ絵もそこそこあるのでnsfw！
+などなど...
+
+---
+
+### プロンプトの勉強用
+
+- [ちちぷい](https://www.chichi-pui.com/)
+  - AI生成画像投稿サイト
+  - たまにプロンプトが併記されてるので参考にしつつ、よさそうなLoRAやModelの物色にも使える。
+  - センシティブ絵もそこそこあるのでnsfw！
+- [Danbooru](https://danbooru.donmai.us/)
+  - AI絵ではなく手書きの絵の投稿サイト
+  - Stable Diffusionのプロンプトはここのタグ由来なので、実質先生みたいなもん
+  - お約束ですが N S F W
+
 
 ---
 
@@ -327,12 +341,13 @@ AI生成画像投稿サイト。たまにプロンプトが併記されてる。
 
 <!-- _class: lead -->
 
-### あるある
+### あるある その1
 
 例:ベタ塗りタッチのパキっとした絵を生成したい
-→それについてのプロンプトを毎回大量に書く必要がある
-→うまいこといかねぇ
-→めんどい。
+
+→ それについてのプロンプトを毎回大量に書く必要がある
+→ そしてうまいこといかねぇ
+→ あ　ほ　く　さ
 
 ---
 
@@ -371,16 +386,16 @@ Negative prompt: <lora:easynegative:1>, skirt
 
 <!-- _class: lead -->
 
-### あるある
+### あるある その2
 
 ![w:400](https://shitekikininarunews.up.seesaa.net/image/img_1.jpg)
 ~~変な~~かっこいいポーズさせてぇ
 
 ---
 
-### OpenPoseでポーズ制御
+### OpenPose(ControlNet)でポーズ制御
 
-- MLの姿勢推定でよく使われるもの(らしい)
+- OpenPoseはMLの姿勢推定でよく使われるもの(らしい)
 - 3次元の姿勢を推定して2次元画像で表現できる
 
 ![w:300](https://shitekikininarunews.up.seesaa.net/image/img_1.jpg) ![w:360](https://user-images.githubusercontent.com/3185871/248469762-ec2fd80a-8ef3-44d0-94c1-f0186b36cd20.png) ![w:360](https://user-images.githubusercontent.com/3185871/248469819-6cb1dc2a-6f37-4b2b-a32c-90cdf2fb4be0.png)
@@ -445,13 +460,23 @@ Negative prompt: <lora:easynegative:1>, skirt
 
 ### 画像の自動生成界隈に触れてみての所感
 
+<style scoped>
+  section {
+    font-size: 1.7em;
+  }
+</style>
+
 - すごいじだいになったなぁとおもいました(小並感)
-- 著作権フリーな画像を用いたモデルの選定も進む
-  - 適正な商用利用のため
+- 学習に使用される絵の著作権、肖像権問題の解消は時間かかりそう
+  - StableDiffusion本体は脱却を進めているが、野良モデルはグレー&黒がまだある
+  - 商用利用では著作権フリーな画像で学習したモデルの利用が法的リスク低そう
+  [参考: 著作権の状況含めてモデル紹介してる個人サイト](https://taron88wordpress.net/2023/01/08/stable-diffusionmodel/)
 - 「極めてなにか生命に対する侮辱を感じ」るものが生成されることもままある
-  - 顔、指が特に崩壊しがち腕足増え目だが、完成度は日々高まっている
+  - 顔、指が特に崩壊しがち腕足増え目だが、修正機能は充実してきている
 - 自動生成とはいえ生成者の発想、知見は相当問われる
-  - なんか作って、でいいものができないのは何事でも同じ。作業者のスキルを活かすのは自分
+  - なんか作って、でいいものができないのは何事でも同じ
+  - 作業者(マシン)のスキルを活かすのは指示を出す自分
+  - 全方向への敬意、大事。n方よし
 
 ---
 
